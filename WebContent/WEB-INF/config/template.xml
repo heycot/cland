@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+       
+<tiles-definitions>
+ <!-- ADMIN TEMPLATE -->
+  <definition name="admin.template" template="/WEB-INF/templates/admin/template.jsp">
+    <put-attribute name="header" value="/WEB-INF/templates/admin/header.jsp" />
+     <put-attribute name="left-bar" value="/WEB-INF/templates/admin/left-bar.jsp" />
+    <put-attribute name="body" value="" />
+    <put-attribute name="footer" value="/WEB-INF/templates/admin/footer.jsp" />
+  </definition>
+  
+  <definition name="admin.index.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/index/index.jsp" />
+  </definition>
+  
+   <!-- start news -->
+  <definition name="admin.news.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/news/index.jsp" />
+  </definition>
+  
+  <definition name="admin.news.edit" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/news/edit.jsp" />
+  </definition>
+  
+  <definition name="admin.news.add" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/news/add.jsp" />
+  </definition>
+  
+  
+  <definition name="admin.news.recycle" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/news/recycle.jsp" />
+  </definition>
+  
+  <!-- end news -->
+  
+  <!-- start category -->
+  <definition name="admin.cat.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/category/cat.jsp" />
+  </definition>
+  
+  <definition name="admin.cat.add" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/category/add.jsp" />
+  </definition>
+  
+  <definition name="admin.cat.edit" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/category/edit.jsp" />
+  </definition>
+  <!-- end category -->
+  
+  <!-- start user -->
+  <definition name="admin.user.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/user/index.jsp" />
+  </definition>
+  
+  <definition name="admin.user.add" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/user/add.jsp" />
+  </definition>
+  
+  <definition name="admin.user.edit" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/user/edit.jsp" />
+  </definition>
+  
+  <definition name="admin.user.recycle" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/user/recycle.jsp" />
+  </definition>
+  <!-- end user -->
+  
+  <!-- start auth -->
+  
+  <definition name="admin.profile" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/auth/profile.jsp" />
+  </definition> 
+  
+  <definition name="auth.login" template="/WEB-INF/jsp/auth/login.jsp">
+    <put-attribute name="header" value="/WEB-INF/templates/admin/header.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/templates/auth/footer.jsp" />
+  </definition>
+  
+  <definition name="auth.changePass" template="/WEB-INF/jsp/auth/changePass.jsp">
+    <put-attribute name="header" value="/WEB-INF/templates/admin/header.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/templates/auth/footer.jsp" />
+  </definition>
+  
+  <!-- end auth -->
+  
+  <!-- contact -->
+  
+  <definition name="admin.contact.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/contact/contactNew.jsp" />
+  </definition>
+  
+  <definition name="admin.contact.reply" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/contact/reply.jsp" />
+  </definition>
+  
+   <definition name="admin.contact.recycle" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/contact/recycle.jsp" />
+  </definition>
+  
+  <!-- recycle -->
+  
+   <definition name="admin.recycle.index" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/admin/recycle/index.jsp" />
+  </definition>
+  
+  <!-- error 403 -->
+  <definition name="error403" extends="admin.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/error/403.jsp" />
+  </definition> 
+   <!--END ADMIN TEMPLATE -->
+    <!-- ************************************************************************ -->
+    
+   <!-- PUBLIC TEMPLATE -->
+  <definition name="public.template" template="/WEB-INF/templates/public/template.jsp">
+    <put-attribute name="header" value="/WEB-INF/templates/public/header.jsp" />
+     <put-attribute name="rightbar" value="/WEB-INF/templates/public/rightbar.jsp" />
+    <put-attribute name="body" value="" />
+    <put-attribute name="footer" value="/WEB-INF/templates/public/footer.jsp" />
+  </definition>
+  
+  <definition name="public.land.index" extends="public.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/public/index.jsp" />
+  </definition>
+  
+  <definition name="public.land.cat" extends="public.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/public/cat.jsp" />
+  </definition>
+  
+  <definition name="public.land.detail" extends="public.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/public/single.jsp" />
+  </definition>
+  
+  <definition name="public.contact.index" extends="public.template">
+    <put-attribute name="body" value="/WEB-INF/jsp/public/contact.jsp" />
+  </definition>
+  
+  <!--END PUBLIC TEMPLATE -->
+</tiles-definitions>
